@@ -14,7 +14,6 @@ class Printer(threading.Thread):
         self.delay = delay
         self.step = 0
         self.until = until
-        self.text = None
         self.active = 1
         threading.Thread.__init__(self)
 
