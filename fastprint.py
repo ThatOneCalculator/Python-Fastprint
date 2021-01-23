@@ -36,6 +36,7 @@ class Printer(threading.Thread):
 
     def stop(self):
         self.active = 0
+        print(f"Printer {printer} stopped.")
 
     def __str__(self):
         # Human representation of current Printer object.
@@ -51,4 +52,3 @@ printer2.print("Stopping after 10 prints.")
 time.sleep(30)
 
 printer.stop()
-print(f"Printer {printer} stopped.")
