@@ -1,12 +1,21 @@
 import time
 import threading
 
+"""
+Some examples:
 
 # printer = Printer(5)
 # printer.print("Hello")  # Prints "Hello" every 5 seconds until printer.stop() called.
 
 # printer = Printer(1, until=10)
-# printer.print("Sup")  # Prints "Sup" every 1 seconds 10 times.
+# printer.print("Sup")  # Prints "Sup" every 1 seconds 10 times. No need to call .stop()
+
+
+# p = Printer(2, 10).print("Simple one-liner example.")  # Call `p.stop()` to stop.
+
+# Printer(1, 5).print("I stop automatically after 5 seconds, no need to assign.")
+
+"""
 
 
 class Printer(threading.Thread):
