@@ -14,3 +14,4 @@ from fastprint import pr
 pr("long\ntext") # each line takes 1 second
 pr("other\n\long\text", 0.2) # each line takes 0.2 seconds
 ```
+Check out example.py
