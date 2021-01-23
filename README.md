@@ -1,7 +1,6 @@
 # Python-Fastprint
-I'm sure this was done before, but this is an easy way to print long strings in Python 3. 
 
-Python3 module to print out text.
+Python 3 module to print out long strings of text with intervals of time inbetween
 
 Install:
 `pip install fastprint`
