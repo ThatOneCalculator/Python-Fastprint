@@ -1,5 +1,7 @@
+from async_fastprint import async_pr
 from fastprint import pr
 
+# Sync (Blocking)
 st = """This is
 the first
 very long
@@ -28,3 +30,16 @@ on Github!
 My username is
 ThatOneCalculator"""
 pr(st)
+
+
+# Asynchronous
+st = """
+This
+is 
+very long
+its also 
+async!
+"""
+
+async def foo:
+    return async_pr(st)
