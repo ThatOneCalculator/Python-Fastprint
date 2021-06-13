@@ -1,5 +1,4 @@
-from async_fastprint import async_pr
-from fastprint import pr
+import fastprint
 
 # Sync (Blocking)
 st = """This is
@@ -42,4 +41,4 @@ async!
 """
 
 async def foo:
-    return async_pr(st)
+    return fastprint.asyncrun(st)
