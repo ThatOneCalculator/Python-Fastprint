@@ -1,3 +1,4 @@
+import asyncio
 import time
 import threading
 
@@ -19,6 +20,7 @@ Some examples:
 
 
 class Printer(threading.Thread):
+    
     def __init__(self, delay: int, until=0):  # until = steps, 0 default until .stop() called
         self.delay = delay
         self.step = 0
@@ -29,6 +31,12 @@ class Printer(threading.Thread):
     def print(self, text):
         self.text = text
         self.start()
+        
+    
+    async def asyncrun(self, st, delay=1):
+	    for line in st.splitlines():
+	        print(line)
+	        await asyncio.sleep(delay)
 
     def run(self):
         print(f"Printer {self} started.")
