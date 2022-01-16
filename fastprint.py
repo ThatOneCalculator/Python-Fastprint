@@ -60,12 +60,13 @@ class Printer(threading.Thread):
         return f"<Printer <{self.delay}:{self.until}>"
 
 
-printer = Printer(5)
-printer.print("Printing every 5 seconds until .stop() called.")
+if __name__ == "main":
+	printer = Printer(5)
+	printer.print("Printing every 5 seconds until .stop() called.")
 
-printer2 = Printer(1, 10)
-printer2.print("Stopping after 10 prints.")
+	printer2 = Printer(1, 10)
+	printer2.print("Stopping after 10 prints.")
 
-time.sleep(30)
+	time.sleep(30)
 
-printer.stop()
+	printer.stop()
